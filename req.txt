@@ -1,0 +1,2 @@
+pytest==6.0.1
+git+https://github.com/neo4j-contrib/neomodel@9b174635c5cb2111147ae4997f62212c45f27fc3

@@ -1,12 +1,11 @@
 from __future__ import print_function
 
 from neomodel import db, change_neo4j_password, clear_neo4j_database
-from neo4j.v1 import CypherError
-
+from neo4j.exceptions import Neo4jError
 # Travis default password dance
 try:
     clear_neo4j_database(db)
-except CypherError as ce:
+except Neo4jError as ce:
     # handle instance without password being changed
     if 'The credentials you provided were valid, but must be changed before you can use this instance' in str(ce):
         change_neo4j_password(db, 'test')
