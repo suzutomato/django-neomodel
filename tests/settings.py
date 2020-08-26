@@ -5,7 +5,6 @@ import sys
 here = os.path.abspath(os.path.dirname(__file__))
 sys.path.insert(0, here)
 sys.path.insert(0, os.path.join(here, os.pardir))
-
 SITE_ID = 300
 
 DEBUG = True
@@ -25,9 +24,12 @@ DATABASES = {
         'PORT': '',
     },
 }
-
-NEOMODEL_NEO4J_BOLT_URL = os.environ.get('NEO4J_BOLT_URL', 'bolt://neo4j:neo4j@localhost:7687')
+DEFAULT_INDEX_TABLESPACE = "10"
+NEOMODEL_NEO4J_BOLT_URL = os.environ.get('NEO4J_BOLT_URL', 'bolt://neo4j:0000@localhost:7687')
 NEOMODEL_SIGNALS = True
+NEOMODEL_FORCE_TIMEZONE = False
+NEOMODEL_ENCRYPTED_CONNECTION = True
+NEOMODEL_MAX_POOL_SIZE = 50
 
 TEMPLATES = [
     {
