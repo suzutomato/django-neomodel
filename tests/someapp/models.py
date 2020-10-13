@@ -9,7 +9,7 @@ class Library(models.Model):
     name = models.CharField(max_length=10)
 
     class Meta:
-        app_label = 'someapp'
+        app_label = 'library'
 
 
 class Book(DjangoNode):
@@ -24,4 +24,4 @@ class Book(DjangoNode):
     created = DateTimeProperty(default=datetime.utcnow)
 
     class Meta:
-        app_label = 'someapp'
+        app_label = 'book'

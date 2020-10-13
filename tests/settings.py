@@ -38,15 +38,21 @@ TEMPLATES = [
     },
 ]
 
-INSTALLED_APPS = (
+INSTALLED_APPS = [
+    # Django
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.sites',
+
+    # Third party
     'django_neomodel',
+
+    # Test
     'tests.someapp',
-)
+]
 
 USE_TZ = True
 TIME_ZONE = 'UTC'
 MIDDLEWARE = []
+

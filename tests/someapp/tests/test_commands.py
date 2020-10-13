@@ -1,5 +1,7 @@
 from django.core.management import call_command
 from django.test import TestCase
+import django
+django.setup()
 try:
     from StringIO import StringIO ## for Python 2
 except ImportError:

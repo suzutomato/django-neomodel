@@ -1,5 +1,7 @@
 from django.test.testcases import TestCase as DjangoTestCase
 from django.forms.models import ModelForm
+import django
+django.setup()
 from tests.someapp.models import Book
 
 class BookForm(ModelForm):

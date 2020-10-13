@@ -1,6 +1,8 @@
 from django.test import TestCase
 from neomodel import db, clear_neo4j_database
 from django.db import transaction
+import django
+django.setup()
 from tests.someapp.models import Book, Library
 
 class AtomicityTestClass(TestCase):

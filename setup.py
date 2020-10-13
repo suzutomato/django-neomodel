@@ -12,8 +12,8 @@ setup(
     license='MIT',
     packages=find_packages(exclude=('tests',)),
     keywords='neo4j django plugin neomodel',
-    install_requires=['neomodel>=4.0.1', 'neo4j-driver==4.1.1', 'pytz>=2016.10', 'django>=1.9'],
-    tests_require=['pytest>=5.2.1'],
+    install_requires=['neomodel>=4.0.1', 'neo4j-driver==4.1.1', 'pytz>=2020.1', 'django==2.2'],
+    tests_require=['pytest-django>=3.10.0'],
     classifiers=[
         "Development Status :: 4 - Beta",
         'Intended Audience :: Developers',
@@ -23,6 +23,6 @@ setup(
         'Topic :: Software Development :: Libraries :: Python Modules',
         "Programming Language :: Python :: 3.6",
         "Programming Language :: Python :: 3.7",
-        "Programming Language :: Python :: 3.8",
+        # "Programming Language :: Python :: 3.8",
         "Topic :: Database",
     ])
